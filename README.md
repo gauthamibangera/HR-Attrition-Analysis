@@ -1,56 +1,30 @@
-# HR Attrition Analysis
+#HR Attrition Analysis
+##Project Overview
 
-## Project Overview
+An exploratory analysis of an HR employee dataset to identify the factors most strongly linked to attrition — overtime, job satisfaction, work-life balance, promotion history, and income — so retention efforts can be targeted rather than applied company-wide.
 
-This project analyzes employee data to understand the factors associated with employee attrition. Exploratory Data Analysis (EDA) was performed to identify patterns and insights related to employee demographics, salary, job roles, education, and attrition.
+##Dataset
 
-## Objectives
+hr_attrition_light_clean.csv — 1,212 employee records, 23 columns. Raw data required cleaning: duplicate IDs, inconsistent category formatting, and missing values.
 
-- Analyze employee attrition patterns.
-- Identify departments and job roles with higher attrition.
-- Study the relationship between salary and attrition.
-- Analyze attrition across different age groups and education levels.
-- Understand employee compensation patterns.
+Demographics: Age, Gender, Department, JobRole, EducationField, MaritalStatus
+Compensation: MonthlyIncome, PercentSalaryHike
+Tenure & growth: YearsAtCompany, YearsSinceLastPromotion, TotalWorkingYears, NumCompaniesWorked
+Satisfaction: JobSatisfaction, EnvironmentSatisfaction, WorkLifeBalance, JobInvolvement
+Target: Attrition
+Tools & Technologies
+Python
+Pandas, NumPy
+Matplotlib, Seaborn
+Jupyter Notebook
+Key Insights
 
-## Dataset
+Attrition sits at 17% overall, and a few factors stand out as most strongly linked to it:
 
-The dataset contains employee information including:
+Overtime — the biggest driver. Employees who work overtime leave almost 5x more often (37.7% vs 7.9%).
+Job satisfaction & work-life balance — both show a clear pattern: lower scores mean higher attrition.
+Promotion history — employees who left went longer without a promotion (9 years vs 6 years, median).
+Income — a smaller factor. Leavers earned somewhat less, but the two groups overlap too much for pay alone to explain attrition.
+#Conclusion
 
-- Employee ID
-- Department
-- Gender
-- Job Role
-- Education
-- Age
-- Salary
-- Bonus
-- Attrition
-- Total Compensation
-
-## Tools & Technologies
-
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
-
-## Analysis Performed
-
-The project includes data cleaning, handling missing values, correcting data inconsistencies, descriptive statistics, and univariate and bivariate analysis using visualizations.
-
-## Key Insights
-
-The analysis explores:
-
-- Attrition distribution among employees.
-- Departments with higher attrition.
-- Salary differences between employees who stayed and those who left.
-- Average salary across different job roles.
-- The relationship between education level and attrition.
-- Age groups with higher attrition.
-
-## Conclusion
-
-The analysis provides insights into employee attrition patterns and highlights factors that can help organizations better understand employee turnover.
+Workload management (reducing overtime) is the single most actionable lever for retention, followed by improvements to satisfaction and work-life balance. Promotion timelines and pay play a secondary role.
